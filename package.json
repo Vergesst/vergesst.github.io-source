@@ -9,7 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.5.13"
+    "@tailwindcss/vite": "^4.1.7",
+    "bootstrap": "^5.3.6",
+    "tailwindcss": "^4.1.7",
+    "vue": "^3.5.13",
+    "vue3-layer": "^1.0.18"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.3",
