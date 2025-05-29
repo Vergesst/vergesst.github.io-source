@@ -60,7 +60,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="js">
 import { ref } from 'vue';
 
 // Reactive variable for the JavaScript code input
