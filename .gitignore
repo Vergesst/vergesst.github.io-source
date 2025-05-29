@@ -25,5 +25,7 @@ coverage
 *.sln
 *.sw?
 
+# source archive
+src.zip
 
 *.tsbuildinfo
