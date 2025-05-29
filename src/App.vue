@@ -12,7 +12,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <RouterLink class="nav-link" to="/blog" @click="navigateAndCloseNav('/blog')">All Blogs</RouterLink>
           </li>
@@ -31,7 +31,7 @@
               </li>
             </ul>
           </li>
-        </ul> -->
+        </ul>
       </div>
     </div>
   </nav>
@@ -51,7 +51,8 @@ const blogPosts = ref([
   { slug: 'first-blog-post', title: 'My First Blog Post' },
   { slug: 'awesome-vue-tips', title: 'Awesome Vue.js Tips' },
   { slug: 'my-thoughts-on-tech', title: 'My Thoughts on Modern Tech' },
-  { slug: 'sample', title: 'Sample Markdown Post' }
+  { slug: 'sample', title: 'Sample Markdown Post' },
+  { slug: 'preface', title: 'Preface to all the Times' }
 ]);
 
 

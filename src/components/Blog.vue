@@ -1,5 +1,5 @@
 <template>
-  <div style="padding: 10px" v-html="renderedMarkdown"></div>
+  <div style="padding: 15px" v-html="renderedMarkdown"></div>
 </template>
 
 <script setup lang="ts">
