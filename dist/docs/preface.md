@@ -1,4 +1,4 @@
-# *PREFACE---写在前面的话*
+<h1 style="text-align: center"><em>Preface---写在前面的话</em></h1>
 </br>
 
 ### Why [vue](https://vuejs.org/)?
@@ -42,5 +42,7 @@
 以上
 
 祝大家越来越好罢❤️❤️❤️
+</br>
+<br>
 
 <a style="float: right;">---Vergisst <sub>25.05.29 珠海</sub></a>

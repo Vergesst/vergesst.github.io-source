@@ -4,6 +4,7 @@ import Home from '../components/Home.vue'
 import JSPlayground from '../components/JSPlayground.vue'
 import Blog from '../components/Blog.vue'
 import NotFound from '../components/NotFound.vue'
+import About from '../components/About.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -28,7 +29,12 @@ const routes: Array<RouteRecordRaw> = [
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: NotFound,
-  }
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About,
+  },
 ]
 
 const router = createRouter({
