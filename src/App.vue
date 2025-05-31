@@ -1,6 +1,6 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light frosted-navbar">
-    <div class="navbar-div">
+  <nav class="navbar navbar-expand-lg navbar-light frosted-navbar">
+    <div class="navbar-div" style="align-items: center;">
       <RouterLink class="navbar-brand" to="/">
         <span class="brand-v"><em>V</em></span>
         <span class="brand-one"><em>one</em></span>
@@ -12,10 +12,10 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
+        <ul class="navbar-nav ms-auto navbar-link">
+          <!-- <li class="nav-item">
             <RouterLink class="nav-link" to="/blog" @click="navigateAndCloseNav('/blog')">All Blogs</RouterLink>
-          </li>
+          </li> -->
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -31,10 +31,17 @@
               </li>
             </ul>
           </li>
+          <!-- about page -->
+          <li>
+            <em>
+              <a href="/#/about" class="font-semibold">About</a>
+            </em>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+
   <RouterView class="container" />
 </template>
 
@@ -48,9 +55,6 @@ const router = useRouter()
 // In a real application, you'd fetch this from an API or a static JSON file
 // generated from your Markdown files. For now, hardcode it.
 const blogPosts = ref([
-  { slug: 'first-blog-post', title: 'My First Blog Post' },
-  { slug: 'awesome-vue-tips', title: 'Awesome Vue.js Tips' },
-  { slug: 'my-thoughts-on-tech', title: 'My Thoughts on Modern Tech' },
   { slug: 'sample', title: 'Sample Markdown Post' },
   { slug: 'preface', title: 'Preface to all the Times' }
 ]);
@@ -108,9 +112,9 @@ const navigateAndCloseNav = (routePath: string) => {
 }
 
 div.navbar-div {
-  margin-top: 15px;
-  margin-bottom: 10px;
-  margin-left: 280px;
+  margin-top: 1%;
+  margin-bottom: 0.5%;
+  margin-left: 10%;
 }
 
 /* Adjustments for the dropdown if needed for positioning/styling */
@@ -121,5 +125,25 @@ div.navbar-div {
   /* Apply blur to dropdown as well */
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navbar-link {
+  font-size: 20px;
+}
+
+/* Custom styles for the About link */
+.text-blue-600 {
+  color: #2563eb;
+  /* Tailwind's blue-600 */
+}
+
+.hover\:text-blue-800:hover {
+  color: #1e40af;
+  /* Tailwind's blue-800 */
+}
+
+.font-semibold {
+  font-weight: 600;
+  /* Tailwind's font-semibold */
 }
 </style>
