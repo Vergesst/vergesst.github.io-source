@@ -5,7 +5,7 @@
         <span class="brand-v"><em>V</em></span>
         <span class="brand-one"><em>one</em></span>
       </RouterLink>
-      <span style="margin-bottom: -0.5%"><em> ---Vergisst' zone</em></span>
+      <span style="margin-bottom: -1%"><em> ---Vergisst' zone</em></span>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -30,6 +30,11 @@
           <li class="nav-item">
             <em>
               <RouterLink to='/about' class="nav-link font-semibold about-link">About</RouterLink>
+            </em>
+          </li>
+          <li class="nav-item">
+            <em>
+              <RouterLink to='/friends' class="nav-link font-semibold about-link">Friends</RouterLink>
             </em>
           </li>
         </ul>
@@ -135,7 +140,7 @@ body::before {
   /* Stack RouterView vertically within it */
   /* IMPORTANT: Adjust this margin-top based on your actual navbar height.
      Measure your navbar's height in the browser's developer tools and set this value. */
-  margin-top: 80px;
+  margin-top: 85px;
   /* Example: If navbar is approx 60px, add 20px buffer */
 }
 

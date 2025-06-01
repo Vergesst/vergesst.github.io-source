@@ -5,6 +5,8 @@ import JSPlayground from '../components/JSPlayground.vue'
 import Blog from '../components/Blog.vue'
 import NotFound from '../components/NotFound.vue'
 import About from '../components/About.vue'
+import Archive from '../components/Archive.vue'
+import Friends from '../components/Friends.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -34,6 +36,16 @@ const routes: Array<RouteRecordRaw> = [
     path: '/about',
     name: 'About',
     component: About,
+  },
+  {
+    path: '/blog/archive',
+    name: 'BlogArchive',
+    component: Archive,
+  },
+  {
+    path: '/friends',
+    name: 'Friends',
+    component: Friends,
   },
 ]
 
