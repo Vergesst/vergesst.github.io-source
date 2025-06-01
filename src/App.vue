@@ -45,6 +45,17 @@
   <main class="main-content-wrapper">
     <RouterView class="container content-full-height" />
   </main>
+
+  <div style="color: white; margin-bottom: 0">
+    <footer class="text-center mt-4">
+      <p class="text-muted">© 2023~2025 Vergisst' zone. All rights reserved.</p>
+      <small class="text-muted">
+        <em>Powered by <a href="https://vuejs.org/">Vue 3</a>, <a href="https://getbootstrap.com/">Bootstrap 5</a>,
+          and <a href="https://marked.js.org/">marked</a></em>
+      </small>
+    </footer>
+    <br>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -77,39 +88,33 @@ const navigateAndCloseNav = (routePath: string) => {
 html,
 body {
   height: 100%;
-  /* Ensure html and body take full viewport height */
   margin: 0;
-  /* Remove default margins */
   padding: 0;
-  /* Remove default padding */
   box-sizing: border-box;
-  /* Include padding and border in the element's total width and height */
   font-family: sans-serif;
-  /* Good practice for default font */
-  /* REMOVED background-image, background-size, etc. as they are in main.css */
-}
-
-body {
+  /* Make sure body takes full viewport height for flexbox to work */
   display: flex;
-  /* Enable flexbox for overall page layout */
   flex-direction: column;
-  /* Stack children vertically */
 }
 
-/* This is the transparent overlay *on top of* your main.css background */
 body::before {
   content: '';
   position: fixed;
-  /* Stays fixed over the background image */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   /* background-color: rgba(0, 0, 0, 0.1); */
-  /* Subtle dark overlay */
   z-index: -1;
-  /* Ensures it's at the very bottom, just above the actual body background */
 }
+
+/* Remove body display flex here if you defined it above */
+/* If you keep it here, ensure it's not duplicated or conflicting */
+/* body {
+    display: flex;
+    flex-direction: column;
+} */
+/* This block can be removed if already in html, body */
 </style>
 
 <style scoped>
@@ -120,71 +125,49 @@ body::before {
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
-  /* Makes the navbar fixed at the top */
   top: 0;
   width: 100%;
   z-index: 1030;
-  /* Ensures it's on top of all other content */
 }
 
 /* Main content wrapper */
 .main-content-wrapper {
   flex-grow: 1;
-  /* This wrapper takes the remaining vertical space */
+  /* This is the key: makes it expand and push the footer down */
   display: flex;
-  /* Make it a flex container to manage its child (RouterView) */
   flex-direction: column;
-  /* Stack RouterView vertically within it */
-  /* IMPORTANT: Adjust this margin-top based on your actual navbar height.
-     Measure your navbar's height in the browser's developer tools and set this value. */
   margin-top: 85px;
-  /* Example: If navbar is approx 60px, add 20px buffer */
+  /* Adjust based on your actual navbar height */
 }
 
 /* Frosted glass for the main content area (RouterView) */
 .content-full-height {
-  /* temporary fix */
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  /* Add border to the top of content area */
   border-radius: 8px;
-  /* Ensure this also applies to top corners */
-  /* If content has border-radius, it might clip the top border,
-         so ensure the border-radius is also applied to the content-full-height. */
 
   flex-grow: 1;
-  /* RouterView itself grows within the main-content-wrapper */
   min-height: 0;
-  /* Allows flex item to shrink properly if content is very short */
   overflow-y: auto;
-  /* Enables scrolling within this area if content overflows */
 
   background-color: rgba(255, 255, 255, 0.3);
-  /* Frosted glass effect */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
-  /* Horizontal padding from Bootstrap's .container is still applied */
   padding-left: var(--bs-gutter-x, 0.75rem);
   padding-right: var(--bs-gutter-x, 0.75rem);
 
-  /* Vertical padding removed here. Apply it inside your specific page components
-     (e.g., in a wrapper div in Preface.vue) to ensure the frosted background
-     extends to the very bottom of the allocated space. */
   padding-top: 0;
   padding-bottom: 0;
 
   position: relative;
-  /* Essential for z-index to work on this layer */
   z-index: 1;
-  /* Places it above the background but below the fixed navbar */
 }
 
-/* Dropdown menu specific z-index (Bootstrap usually handles this, but higher z-index on parent .frosted-navbar is key) */
+/* Dropdown menu specific z-index */
 .dropdown-menu {
   --bs-dropdown-bg: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(8px);

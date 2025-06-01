@@ -7,7 +7,8 @@ html, body {
     min-height: 100vh; /* Ensure it covers the full viewport height */
     background-color: #f0f0f0; /* Solid color */
     /* Or an image: */
-    background-image: url('bg1.jpg'); /* Relative to public folder */
+    /* Relative to public folder */ 
+    /* background-image: url('bg1.jpg');  */
     background-size: cover; /* Cover the entire area */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeating */
