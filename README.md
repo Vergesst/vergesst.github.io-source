@@ -4,4 +4,4 @@
 
 ### Why *'Vone'* ?
 
-Taking the first letter of *'Vergisst'* and the last part of *'zone'* is *'vone'*
+'Vone' stands for *"Vergisst' Zone"*
