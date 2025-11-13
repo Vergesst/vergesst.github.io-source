@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="margin-top: 30%; margin-bottom: 60%">
+    <div style="">
       <a style="font-size: 40px; color: red; text-decoration: none; text-align: center; display: block; margin-top: 50px; margin-bottom: 20px;"
         class="home-title" href="/">
         <em>Welcome!</em>
@@ -15,8 +15,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()
-
-
 </script>
 
 <style scoped>

@@ -13,6 +13,11 @@
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto navbar-link">
+          <li class="nav-item">
+            <em>
+              <RouterLink to='/' class="nav-link font-semibold about-link">Home</RouterLink>
+            </em>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle font-semibold" href="#" id="navbarDropdown" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">

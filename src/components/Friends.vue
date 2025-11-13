@@ -13,6 +13,13 @@
           </a>
           <a href="https://blog.candlest.cc" class="friends-link">Candlest</a>
         </li>
+        <li>
+          <a href="https://github.com/xy3xy3">
+            <img src="https://avatars.githubusercontent.com/u/25221048?v=4" alt="xy3 GitHub Profile"
+              style="border-radius: 50%; height: 80px; width: 80px;">
+          </a>
+          <a href="https://blog.skyw.cc" class="friends-link">xy3</a>
+        </li>
       </ul>
     </div>
   </div>
